@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Repo') {
             steps {
-                git url: 'https://github.com/kushuextra/ci-node-app.git', branch: 'main'
+                git url: 'https://github.com/bubblegum017/ci-node-app.git', branch: 'main'
             }
         }
 
