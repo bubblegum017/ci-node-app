@@ -5,25 +5,25 @@ pipeline {
 
         stage('Clone Repo') {
             steps {
-                git url: 'https://github.com/bubblegum017/ci-node-app.git', branch: 'main'
+                git url: 'https://github.com/kushuextra/ci-node-app.git', branch: 'main'
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Run App') {
             steps {
-                sh 'node app.js'
+                bat 'node app.js'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'node test.js'
+                bat 'node test.js'
             }
         }
 
@@ -43,4 +43,3 @@ pipeline {
         }
     }
 }
-
